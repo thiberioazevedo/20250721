@@ -50,3 +50,65 @@ Para cada jogo o parser deve gerar algo como:
 7. Após concluir o teste suba em um repositório privado e nos mande o link
 
 HAVE FUN :)
+
+# Documentação Desenvolvedor
+
+🚀 Projeto backend desenvolvido em **C# (.NET)** com foco em:
+
+- **Domain-Driven Design (DDD)** para modelagem rica do domínio
+- **Test-Driven Development (TDD)** para garantir confiabilidade e evolução segura
+- **Clean Code** para clareza, organização e legibilidade
+- Princípios **SOLID** para design orientado à manutenção e escalabilidade
+- **IoC (Inversão de Controle)** via Dependency Injection para desacoplamento
+- Exposição via **API RESTful** acessível e bem estruturada
+
+## 🔍 Componentes-Chave
+
+### 🌐 API
+
+- Exposta via ASP.NET Core
+- Controladores RESTful organizados
+- Utiliza injeção de dependência para acesso aos serviços
+
+### 📄 LogParserService
+
+- Serviço que interpreta entradas de log e gera objetos ricos do domínio
+- Aplica regras de validação e parsing de forma extensível
+- Totalmente coberto por testes automatizados
+
+### 🏗 EntityFactory
+
+- Fábrica que encapsula a construção segura das entidades
+- Garante integridade e aderência às regras do domínio
+- Facilitadora de testes e refatorações
+
+## 🧼 Boas Práticas
+
+### ✅ Clean Code
+
+- Métodos curtos e autoexplicativos
+- Nomeação clara de variáveis e classes
+- Redução da complexidade ciclomática
+- Comentários mínimos e precisos
+
+### 🧩 Princípios SOLID
+
+- **S**: Single Responsibility — cada classe com propósito único
+- **O**: Open/Closed — código aberto para extensão, fechado para modificação
+- **L**: Liskov Substitution — heranças seguras e consistentes
+- **I**: Interface Segregation — contratos específicos por necessidade
+- **D**: Dependency Inversion — dependência de abstrações, não implementações
+
+## 🔌 IoC e Dependency Injection
+
+- Configurado em `Infrastructure/IoC/DependencyInjection.cs`
+- Centraliza o registro de serviços e fábricas
+- Facilita testes e substituição de implementações
+
+Exemplo:
+
+```csharp
+services.AddScoped<ILogParserService, LogParserService>();
+services.AddScoped<IEntityFactory, EntityFactory>();
+
+
