@@ -1,0 +1,14 @@
+/.vs
+/Quack.API/.vs
+/Quack.API/bin
+/Quack.API/obj
+/Quack.Application/bin
+/Quack.Application/obj
+/Quack.Domain/bin
+/Quack.Domain/obj
+/Quack.Infrastructure/bin
+/Quack.Infrastructure/obj
+/Quack.IoC/bin
+/Quack.IoC/obj
+/Quack.Tests/bin
+/Quack.Tests/obj

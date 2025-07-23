@@ -1,0 +1,6 @@
+@_Quack.API_HostAddress = http://localhost:5278
+
+GET {{_Quack.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
