@@ -2,9 +2,17 @@
 {
     public class ShutdownGame : BaseEntity
     {
-        public static ShutdownGame CreateInstance()
+        public int ClientId { get; internal set; }
+
+        private ShutdownGame(string eventName, string time)
         {
-            throw new NotImplementedException();
+            EventName = eventName;
+            Time = time;
+        }
+
+        public static BaseEntity CreateInstance(string eventName, string time)
+        {
+            return new ShutdownGame(eventName, time);
         }
     }
 }

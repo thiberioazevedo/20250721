@@ -6,7 +6,10 @@
         {
             public static string GetValueOrDefault(this Dictionary<string, string> dict, string key, string defaultValue)
             {
-                throw new NotImplementedException();
+                if (dict.TryGetValue(key, out var value) && value is string str)
+                    return str;
+
+                return defaultValue;
             }
         }
     }
